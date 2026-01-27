@@ -1,0 +1,85 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  typedRoutes: true,
+  typescript: { ignoreBuildErrors: true },
+  serverExternalPackages: ["mongoose"],
+  poweredByHeader: false,
+  reactStrictMode: true,
+  distDir: 'build',
+  images: {
+    qualities: [75, 100],
+    remotePatterns: [
+      { protocol: "https", hostname: "api.statsify.net" },
+      { protocol: "http", hostname: "localhost:3000" },
+    ],
+    localPatterns: [
+      { pathname: "/api/skin/head" },
+      { pathname: "/api/skin/render" },
+    ],
+  },
+  redirects: async () => [
+    {
+      source: "/invite",
+      destination: "https://discord.com/oauth2/authorize?client_id=718827787422793820&scope=applications.commands%20bot&permissions=412384021568",
+      permanent: true,
+    },
+    {
+      source: "/discord",
+      destination: "https://discord.gg/Gex6SFwhPc",
+      permanent: true,
+    },
+    {
+      source: "/support",
+      destination: "https://discord.gg/Gex6SFwhPc",
+      permanent: true,
+    },
+    {
+      source: "/premium",
+      destination: "https://patreon.com/statsify",
+      permanent: true,
+    },
+    {
+      source: "/patreon",
+      destination: "https://patreon.com/statsify",
+      permanent: true,
+    },
+    {
+      source: "/donate",
+      destination: "https://patreon.com/statsify",
+      permanent: true,
+    },
+    {
+      source: "/github",
+      destination: "https://github.com/Archie-bot-stack/Archie",
+      permanent: true,
+    },
+    {
+      source: "/twitter",
+      destination: "https://twitter.com/statsifybot",
+      permanent: true,
+    },
+    {
+      source: "/youtube",
+      destination: "https://youtube.com/@statsifybot",
+      permanent: true,
+    },
+    {
+      source: "/terms",
+      destination: "https://j4cobi.notion.site/Archie-Terms-of-Service-0482207df97f4f41909594241cd0b381",
+      permanent: true,
+    },
+    {
+      source: "/privacy",
+      destination: "https://j4cobi.notion.site/Archie-Privacy-Policy-2e636dcacf1e4237b35d7d2ce2d53613",
+      permanent: true,
+    },
+    {
+      source: "/translate",
+      destination: "https://crowdin.com/project/statsify",
+      permanent: true,
+    },
+  ],
+};
+
+export default nextConfig;

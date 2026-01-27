@@ -1,0 +1,27 @@
+# Environment
+.env
+.env.local
+.env.development
+.env.production
+
+# Database
+main.db
+main.db-shm
+main.db-wal
+
+# Build output
+dist/
+build/
+
+# Node modules
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# data
+data/
+data.json

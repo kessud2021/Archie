@@ -1,0 +1,43 @@
+import Link from "next/link";
+import { Brand } from "~/components/icons/logo";
+import { Discord } from "~/components/icons/discord";
+import { Divider } from "./divider";
+import { GitHub } from "~/components/icons/github";
+import { ReactNode } from "react";
+import type { Route } from "next";
+
+export function Footer() {
+  return (
+    <footer className="text-white flex justify-center p-8">
+      <div className="w-container flex flex-col gap-8 md:gap-4 pb-8">
+        <Divider className="opacity-10" />
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center">
+          <Link href="/">
+            <Brand />
+          </Link>
+          <div className="flex gap-4">
+            <IconContainer href="/discord" label="Discord">
+              <Discord className="drop-shadow-mc-1" />
+            </IconContainer>
+            <IconContainer href="/github" label="GitHub">
+              <GitHub className="drop-shadow-mc-1" />
+            </IconContainer>
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between text-mc-1.5 text-mc-white items-center">
+          <p className="opacity-60">© {new Date().getFullYear()} Archie. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function IconContainer({ children, label, href }: { children: ReactNode; label: string; href: Route }) {
+  return (
+    <Link href={href} aria-label={label} className="group" prefetch={false}>
+      <div className="bg-black/50 flex items-center justify-center p-0.5 group-hover:-translate-y-[4px] transition-all shadow-[4px_4px_0_rgb(0_0_0_/_0.2)]">
+        {children}
+      </div>
+    </Link>
+  );
+}
