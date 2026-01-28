@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { getLeaderboard } from '../api/archmc'
-import { GAME_STAT_MAP, STAT_DISPLAYS } from '../config/constants'
+import { GAME_STAT_MAP } from '../config/constants'
 import type { LeaderboardEntry } from '../types/index'
 
 // Map bot's game config to UI format
@@ -34,7 +34,7 @@ const error = ref('')
 onMounted(async () => {
   try {
     for (const game of games) {
-      const data = await getLeaderboard(game.id, 0, 5)
+      const data = await getLeaderboard(game.id)
       topPlayers.value[game.id] = data.entries || []
     }
   } catch (err) {

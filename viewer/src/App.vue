@@ -16,12 +16,12 @@ import { RouterLink, RouterView } from 'vue-router'
           <li class="dropdown">
             <span>Leaderboards</span>
             <div class="dropdown-menu">
-              <RouterLink to="/leaderboards/bedwars_wins">Bedwars</RouterLink>
-              <RouterLink to="/leaderboards/skywars_wins">SkyWars</RouterLink>
-              <RouterLink to="/leaderboards/bridges_wins">Bridges</RouterLink>
-              <RouterLink to="/leaderboards/stickfight_wins">Stickfight</RouterLink>
-              <RouterLink to="/leaderboards/sumo_wins">Sumo</RouterLink>
-              <RouterLink to="/leaderboards/builduhc_wins">BuildUHC</RouterLink>
+              <RouterLink to="/leaderboards/wins:bedwars:global:lifetime">Bedwars</RouterLink>
+              <RouterLink to="/leaderboards/wins:skywars:global:lifetime">SkyWars</RouterLink>
+              <RouterLink to="/leaderboards/wins:bridges:global:lifetime">Bridges</RouterLink>
+              <RouterLink to="/leaderboards/wins:stickfight:global:lifetime">Stickfight</RouterLink>
+              <RouterLink to="/leaderboards/wins:sumo:global:lifetime">Sumo</RouterLink>
+              <RouterLink to="/leaderboards/wins:builduhc:global:lifetime">BuildUHC</RouterLink>
             </div>
           </li>
         </ul>

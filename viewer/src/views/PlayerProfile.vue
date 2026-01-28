@@ -2,7 +2,6 @@
 import { ref, onMounted, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { getPlayerStats, getEconomyData, getPlayerSkinUrl } from '../api/archmc'
-import { STAT_DISPLAYS } from '../config/constants'
 import type { PlayerStatistics } from '../types/index'
 
 interface Props {

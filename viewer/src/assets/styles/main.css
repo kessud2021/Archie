@@ -8,22 +8,34 @@
   --border-color: rgba(255, 215, 0, 0.2);
 }
 
+/* Minecraft font from Google Fonts alternative */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Minecraft';
+  src: local('Inconsolata'), url('https://fonts.gstatic.com/s/inconsolata/v32/QldgNThLqRwH-OJ1UHjJ1d3JnE8YJdCqJQKqWvYX50Gw.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Minecraft', system-ui, Avenir, Helvetica, Arial, sans-serif !important;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  font-family: 'Minecraft', system-ui, Avenir, Helvetica, Arial, sans-serif !important;
 }
 
 body {
   background: linear-gradient(135deg, var(--dark-bg) 0%, var(--light-bg) 100%);
   color: var(--text-primary);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Minecraft', system-ui, Avenir, Helvetica, Arial, sans-serif !important;
   line-height: 1.6;
 }
 

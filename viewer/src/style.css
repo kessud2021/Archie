@@ -1,5 +1,18 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/minecraft.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Minecraft', system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
+
+html, body {
+  font-family: 'Minecraft', system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Minecraft', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

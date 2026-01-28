@@ -2,7 +2,7 @@
 import { ref, onMounted, watch, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { getLeaderboard } from '../api/archmc'
-import { STAT_DISPLAYS } from '../config/constants'
+import { GAME_STAT_MAP } from '../config/constants'
 import type { LeaderboardEntry } from '../types/index'
 
 interface Props {
@@ -13,7 +13,7 @@ const props = defineProps<Props>()
 
 // Map stat IDs to game names from GAME_STAT_MAP
 const gameNames: Record<string, string> = Object.entries(GAME_STAT_MAP).reduce(
-  (acc, [gameKey, statId]) => {
+  (acc: Record<string, string>, [gameKey, statId]: [string, string]) => {
     acc[statId] = gameKey.charAt(0).toUpperCase() + gameKey.slice(1)
     return acc
   },
@@ -34,7 +34,7 @@ const loadLeaderboard = async () => {
   try {
     loading.value = true
     error.value = ''
-    const data = await getLeaderboard(props.stat, currentPage.value, pageSize)
+    const data = await getLeaderboard(props.stat)
     entries.value = data.entries || []
     totalPlayers.value = data.totalPlayers || entries.value.length
   } catch (err) {

@@ -22,6 +22,7 @@ import { log, sendLogToDiscord } from "./utils/logger.js";
 import { getCommandDefinitions } from "./commands/register.js";
 import { initDatabase } from "./db/init.js";
 import { clearStaleCache } from "./db/client.js";
+import { startProxyServer } from "./server/proxy.js";
 import {
   handleStatsCommand,
   handleQuickStatsCommand,
@@ -50,6 +51,12 @@ const LOG_CHANNEL_ID = process.env.LOG_CHANNEL_ID || "";
 
 initDatabase();
 log("info", "✓ Data directory initialized");
+
+// Start proxy server for CORS bypass
+startProxyServer().catch((err) => {
+  log("error", `Failed to start proxy server: ${err.message}`);
+  // Don't exit, let bot continue
+});
 
 // Clear stale cache every hour
 setInterval(() => {
