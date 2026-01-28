@@ -1,7 +1,7 @@
-:HL["/_next/static/chunks/39edb069a4a330de.css","style"]
+:HL["/_next/static/chunks/4435fe11afcf7bb1.css","style"]
 :HL["/_next/static/media/Minecraft%20Bold%20Italic-s.p.acea208b.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/media/Minecraft%20Bold-s.p.dc949fd9.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/media/Minecraft%20Italic-s.p.f4b86558.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/media/Minecraft-s.p.9091ed40.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/chunks/82a3859da53117a9.css","style"]
-0:{"buildId":"KNRD5fH72v-CqsTcRx9Uh","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"(home)","paramType":null,"paramKey":"(home)","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"mCWzlLV6_RQgItRLkKy-X","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"(home)","paramType":null,"paramKey":"(home)","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
